@@ -3,9 +3,9 @@
 ../USB_DEVICE/usbd_gsusb.c:126:16:USBD_GSUSB_DeInit	16	static
 ../USB_DEVICE/usbd_gsusb.c:135:16:USBD_GSUSB_Setup	72	static
 ../USB_DEVICE/usbd_gsusb.c:202:16:USBD_GSUSB_EP0_RxReady	40	static
-../USB_DEVICE/usbd_gsusb.c:226:16:USBD_GSUSB_DataIn	16	static
-../USB_DEVICE/usbd_gsusb.c:233:16:USBD_GSUSB_DataOut	64	static
-../USB_DEVICE/usbd_gsusb.c:266:17:USBD_GSUSB_GetFSCfgDesc	16	static
-../USB_DEVICE/usbd_gsusb.c:272:17:USBD_GSUSB_GetHSCfgDesc	16	static
-../USB_DEVICE/usbd_gsusb.c:278:17:USBD_GSUSB_GetOtherSpeedCfgDesc	16	static
-../USB_DEVICE/usbd_gsusb.c:284:17:USBD_GSUSB_GetDeviceQualifierDesc	16	static
+../USB_DEVICE/usbd_gsusb.c:235:16:USBD_GSUSB_DataIn	16	static
+../USB_DEVICE/usbd_gsusb.c:242:16:USBD_GSUSB_DataOut	64	static
+../USB_DEVICE/usbd_gsusb.c:275:17:USBD_GSUSB_GetFSCfgDesc	16	static
+../USB_DEVICE/usbd_gsusb.c:281:17:USBD_GSUSB_GetHSCfgDesc	16	static
+../USB_DEVICE/usbd_gsusb.c:287:17:USBD_GSUSB_GetOtherSpeedCfgDesc	16	static
+../USB_DEVICE/usbd_gsusb.c:293:17:USBD_GSUSB_GetDeviceQualifierDesc	16	static

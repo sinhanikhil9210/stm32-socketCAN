@@ -157,7 +157,7 @@ static uint8_t USBD_GSUSB_Setup(USBD_HandleTypeDef *pdev,
         gs_device_bt_const btc = {
           .feature   = GS_CAN_FEATURE_LISTEN_ONLY
                      | GS_CAN_FEATURE_LOOP_BACK,
-          .fclk_can  = 48000000,
+          .fclk_can  = 45000000,
           .tseg1_min = 1,  .tseg1_max = 16,
           .tseg2_min = 1,  .tseg2_max = 8,
           .sjw_max   = 4,
@@ -214,7 +214,16 @@ static uint8_t USBD_GSUSB_EP0_RxReady(USBD_HandleTypeDef *pdev) {
 	  }
 
 	  if (h->pending_mode.mode == GS_CAN_MODE_START) {
+		  // Apply loopback or listen-only if requested
+		  if (h->pending_mode.flags & GS_CAN_FEATURE_LOOP_BACK) {
+		      hcan2.Init.Mode = CAN_MODE_LOOPBACK;
+		  } else if (h->pending_mode.flags & GS_CAN_FEATURE_LISTEN_ONLY) {
+		      hcan2.Init.Mode = CAN_MODE_SILENT;
+		  } else {
+		      hcan2.Init.Mode = CAN_MODE_NORMAL;
+		  }
 	    HAL_CAN_Start(&hcan2);
+	    HAL_CAN_ActivateNotification(&hcan2, CAN_IT_RX_FIFO0_MSG_PENDING);
 	  } else {
 	    HAL_CAN_Stop(&hcan2);
 	  }

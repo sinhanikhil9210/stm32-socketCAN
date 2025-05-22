@@ -32,5 +32,6 @@
 "./Middlewares/USB_Device_Library/usbd_ioreq.o"
 "./USB_DEVICE/App/usb_device.o"
 "./USB_DEVICE/Target/usbd_conf.o"
+"./USB_DEVICE/usb_can_bridge.o"
 "./USB_DEVICE/usbd_gsusb.o"
 "./USB_DEVICE/usbd_gsusb_desc.o"

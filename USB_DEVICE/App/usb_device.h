@@ -31,6 +31,9 @@
 #include "stm32f4xx_hal.h"
 #include "usbd_def.h"
 
+
+extern USBD_HandleTypeDef hUsbDeviceFS;
+
 /* USER CODE BEGIN INCLUDE */
 
 /* USER CODE END INCLUDE */

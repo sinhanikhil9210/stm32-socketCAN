@@ -5,14 +5,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../USB_DEVICE/usb_can_bridge.c \
 ../USB_DEVICE/usbd_gsusb.c \
 ../USB_DEVICE/usbd_gsusb_desc.c 
 
 OBJS += \
+./USB_DEVICE/usb_can_bridge.o \
 ./USB_DEVICE/usbd_gsusb.o \
 ./USB_DEVICE/usbd_gsusb_desc.o 
 
 C_DEPS += \
+./USB_DEVICE/usb_can_bridge.d \
 ./USB_DEVICE/usbd_gsusb.d \
 ./USB_DEVICE/usbd_gsusb_desc.d 
 
@@ -24,7 +27,7 @@ USB_DEVICE/%.o USB_DEVICE/%.su USB_DEVICE/%.cyclo: ../USB_DEVICE/%.c USB_DEVICE/
 clean: clean-USB_DEVICE
 
 clean-USB_DEVICE:
-	-$(RM) ./USB_DEVICE/usbd_gsusb.cyclo ./USB_DEVICE/usbd_gsusb.d ./USB_DEVICE/usbd_gsusb.o ./USB_DEVICE/usbd_gsusb.su ./USB_DEVICE/usbd_gsusb_desc.cyclo ./USB_DEVICE/usbd_gsusb_desc.d ./USB_DEVICE/usbd_gsusb_desc.o ./USB_DEVICE/usbd_gsusb_desc.su
+	-$(RM) ./USB_DEVICE/usb_can_bridge.cyclo ./USB_DEVICE/usb_can_bridge.d ./USB_DEVICE/usb_can_bridge.o ./USB_DEVICE/usb_can_bridge.su ./USB_DEVICE/usbd_gsusb.cyclo ./USB_DEVICE/usbd_gsusb.d ./USB_DEVICE/usbd_gsusb.o ./USB_DEVICE/usbd_gsusb.su ./USB_DEVICE/usbd_gsusb_desc.cyclo ./USB_DEVICE/usbd_gsusb_desc.d ./USB_DEVICE/usbd_gsusb_desc.o ./USB_DEVICE/usbd_gsusb_desc.su
 
 .PHONY: clean-USB_DEVICE
 
